@@ -42,9 +42,7 @@
 
       <nav id="site-nav" class="site-nav" aria-label="页面导航">
         <a href="#overview">多通道脑电</a>
-        <a href="#results">脑电实验成果</a>
         <a href="#stimulation">经颅电刺激</a>
-        <a href="#about">关于我</a>
       </nav>
     </header>
 
@@ -116,7 +114,6 @@
           <article><span>02 / 升级与恢复</span><h3>1,000 次升级测试</h3><p>CAN FD IAP、A/B 应用区与厂家恢复区，配合双备份启动状态，实现校验、回滚和故障恢复。</p></article>
           <article><span>03 / 产品替代</span><h3>成本降至原方案的 5%</h3><p>完成产品替代，硬件成本约 3,000 元；空闲低功耗策略使整机功耗由 1.8 W 降至 0.76 W。</p></article>
         </div>
-        <p class="source-note">工程指标及落地情况据个人项目履历整理；下方展示现有 Alpha、SSVEP 实验素材。</p>
 
         <div class="pipeline reveal">
           <div class="pipeline-title">
@@ -200,160 +197,6 @@
             </div>
           </div>
         </div>
-      </section>
-
-      <section id="results" class="results-section section-shell section-space">
-        <div class="section-heading split-heading reveal">
-          <div>
-            <p class="eyebrow">01 / EEG · EXPERIMENTS &amp; RESULTS</p>
-            <h2>用两种经典范式，<br />验证真实脑电响应。</h2>
-          </div>
-          <p>
-            展示 Oz、O1、O2 三个枕区通道的实验结果：Alpha 实验比较睁闭眼节律，SSVEP 实验观察刺激锁定响应。图示实验使用 1 kHz 采样率。
-          </p>
-        </div>
-
-        <article id="alpha" class="case-study alpha-case">
-          <div class="case-index reveal"><span>CASE 01</span><b>ALPHA RHYTHM</b></div>
-          <div class="case-layout">
-            <div class="case-copy reveal">
-              <p class="eyebrow">EYES OPEN / EYES CLOSED</p>
-              <h3>睁眼—闭眼 Alpha 节律</h3>
-              <p>
-                在 Oz、O1、O2 枕区通道记录睁眼和闭眼状态。闭眼时视觉输入减少，8–13 Hz
-                Alpha 活动在本次记录中增强，用于脑电采集链路的生理信号验证。
-              </p>
-              <div class="metric-stack">
-                <div><strong>10.5 <small>Hz</small></strong><span>个体 Alpha 峰频</span></div>
-                <div><strong>+9.05 <small>dB</small></strong><span>闭眼平均功率变化</span></div>
-                <div><strong>3 / 3</strong><span>枕区通道一致增强</span></div>
-              </div>
-              <div class="method-note">
-                <b>分析路径</b>
-                <p>Marker 分段 → 预处理 → Welch 功率谱 → 8–13 Hz 积分 → 睁闭眼配对比较</p>
-              </div>
-            </div>
-
-            <figure class="result-figure reveal" data-delay="100">
-              <button
-                class="image-button paper-image"
-                type="button"
-                data-lightbox="assets/images/alpha-results.webp"
-                data-caption="闭眼状态下枕区 Alpha 活动增强"
-                aria-label="放大 Alpha 分析结果图"
-              >
-                <img
-                  src="assets/images/alpha-results.webp"
-                  alt="睁眼和闭眼状态的枕区功率谱、通道箱线图、配对变化与时间进程"
-                  width="2200"
-                  height="1656"
-                  loading="lazy"
-                />
-                <span class="zoom-hint">放大实验结果图 ↗</span>
-              </button>
-              <figcaption>
-                <b>核心结果</b>
-                <span>闭眼条件在约 10.5 Hz 出现清晰峰值，三个枕区通道的 Alpha 功率均高于睁眼条件。</span>
-              </figcaption>
-            </figure>
-          </div>
-
-          <div class="support-gallery reveal">
-            <figure>
-              <button
-                class="image-button"
-                type="button"
-                data-lightbox="assets/images/alpha-montage.webp"
-                data-caption="Alpha 实验电极布置：Oz、O1、O2；Fp1 为 REF，Fp2 为 BIAS"
-                aria-label="放大 Alpha 电极布置图"
-              >
-                <img src="assets/images/alpha-montage.webp" alt="Alpha 实验电极放置图" loading="lazy" />
-              </button>
-              <figcaption><b>电极布置</b><span>Oz / O1 / O2 枕区采集</span></figcaption>
-            </figure>
-            <figure>
-              <button
-                class="image-button"
-                type="button"
-                data-lightbox="assets/images/alpha-protocol.webp"
-                data-caption="睁眼闭眼实验流程与三通道时域脑电"
-                aria-label="放大 Alpha 实验范式图"
-              >
-                <img src="assets/images/alpha-protocol.webp" alt="睁眼闭眼实验流程与三通道脑电" loading="lazy" />
-              </button>
-              <figcaption><b>范式与原始响应</b><span>状态切换由 Marker 定位</span></figcaption>
-            </figure>
-          </div>
-        </article>
-
-        <article id="ssvep" class="case-study ssvep-case">
-          <div class="case-index reveal"><span>CASE 02</span><b>15-HZ SSVEP</b></div>
-          <div class="case-layout reverse">
-            <figure class="result-figure reveal">
-              <button
-                class="image-button paper-image"
-                type="button"
-                data-lightbox="assets/images/ssvep-results.webp"
-                data-caption="15 Hz SSVEP 的频谱、通道信噪比与事件相关时频结果"
-                aria-label="放大 SSVEP 分析结果图"
-              >
-                <img
-                  src="assets/images/ssvep-results.webp"
-                  alt="15 Hz SSVEP 频谱、各通道信噪比箱线图和时频响应"
-                  width="2200"
-                  height="1657"
-                  loading="lazy"
-                />
-                <span class="zoom-hint">放大实验结果图 ↗</span>
-              </button>
-              <figcaption>
-                <b>核心结果</b>
-                <span>刺激期在 15 Hz 出现持续增强，并观察到 30 Hz 二次谐波；10 个 Trial 均获得正 SNR。</span>
-              </figcaption>
-            </figure>
-
-            <div class="case-copy reveal" data-delay="100">
-              <p class="eyebrow">STEADY-STATE VISUAL EVOKED POTENTIAL</p>
-              <h3>15 Hz 稳态视觉诱发电位</h3>
-              <p>
-                被试注视 15 Hz 闪烁刺激，每个 Trial 包含注视、刺激和休息三个阶段。分析去除刺激开始后
-                0.5 秒的瞬态段，再比较刺激前后频谱与时频能量。
-              </p>
-              <div class="metric-stack">
-                <div><strong>10</strong><span>次重复 Trial</span></div>
-                <div><strong>15 <small>Hz</small></strong><span>基频稳定增强</span></div>
-                <div><strong>30 <small>Hz</small></strong><span>可见二次谐波</span></div>
-              </div>
-              <div class="method-note">
-                <b>分析路径</b>
-                <p>1–45 Hz 滤波 → Marker 分段 → 截去前 0.5 s → PSD / SNR → 事件相关时频分析</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="support-gallery single reveal">
-            <figure>
-              <button
-                class="image-button"
-                type="button"
-                data-lightbox="assets/images/ssvep-protocol.webp"
-                data-caption="15 Hz SSVEP 单 Trial 流程与 Oz、O1、O2 时域脑电"
-                aria-label="放大 SSVEP 实验范式图"
-              >
-                <img src="assets/images/ssvep-protocol.webp" alt="15 Hz SSVEP 实验流程和三通道脑电" loading="lazy" />
-              </button>
-              <figcaption><b>实验范式</b><span>2 s 注视 · 6 s 刺激 · 3 s 休息</span></figcaption>
-            </figure>
-            <div class="protocol-card">
-              <p>ONE TRIAL</p>
-              <ol>
-                <li><span>00–02 s</span><b>Fixation</b><small>建立视觉注视</small></li>
-                <li><span>02–08 s</span><b>15 Hz stimulation</b><small>诱发稳态响应</small></li>
-                <li><span>08–11 s</span><b>Rest</b><small>恢复与下一轮准备</small></li>
-              </ol>
-            </div>
-          </div>
-        </article>
       </section>
 
       <section id="demo" class="demo-section section-space">
@@ -450,20 +293,7 @@
         </div>
       </section>
 
-      <section id="about" class="closing-section section-shell section-space reveal">
-        <p class="eyebrow">ABOUT / 陈庆标</p>
-        <h2>把电路、代码与实验，<br />连接成可运行的设备。</h2>
-        <div class="closing-grid">
-          <p>
-            中国科学技术大学电子信息硕士在读（2024—2027），本科毕业于安徽建筑大学电子信息工程专业。关注嵌入式软硬件研发，参与从电路设计、固件开发到整机验证的完整过程。
-          </p>
-          <ul>
-            <li><span>01</span>C / C++ · FreeRTOS · STM32</li>
-            <li><span>02</span>SPI / UART / CAN FD / USB · 驱动与通信</li>
-            <li><span>03</span>原理图与 PCB · 仪器调试 · 系统验证</li>
-          </ul>
-        </div>
-      </section>
+
     </main>
 
     <footer class="site-footer">
