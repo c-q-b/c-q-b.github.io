@@ -199,6 +199,122 @@
         </div>
       </section>
 
+      <section id="eeg-validation" class="results-section section-shell section-space">
+        <div class="section-heading reveal">
+          <p class="eyebrow">01 / EEG · PHYSIOLOGICAL VALIDATION</p>
+          <h2>用可识别的脑电响应，<br />验证采集与分析链路。</h2>
+          <p>闭眼 Alpha 观察自发节律随状态的变化；SSVEP 观察脑电是否跟随外部视觉刺激。以下结合实际实验图，说明验证过程、结果含义与可扩展的应用。</p>
+          <p class="validation-scope">图示为 Oz、O1、O2 三个枕区通道的范式验证；64 通道是设备规格。这些实验为生理信号采集提供证据，整机噪声、精度和同步延迟仍需独立测试。</p>
+        </div>
+
+        <article id="alpha-validation" class="case-study">
+          <div class="case-index reveal"><span>实验 01 / 自发节律</span><b>EYES OPEN / EYES CLOSED</b></div>
+          <div class="case-layout">
+            <div class="case-copy reveal">
+              <p class="eyebrow">ALPHA RHYTHM · 8–13 Hz</p>
+              <h3>闭上眼睛，<br />观察 Alpha 节律。</h3>
+              <p>Alpha 波是脑电的一种节律，常见频段约为 8–13 Hz。人在清醒、放松并闭眼时，枕区 Alpha 通常更明显；睁眼后往往减弱。因此，睁闭眼对照可以作为采集系统的基础生理验证。<a class="inline-reference" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4512209/" target="_blank" rel="noreferrer" aria-label="阅读 Alpha 生理验证研究">[1]</a></p>
+              <div class="metric-stack">
+                <div><strong>10.5 <small>Hz</small></strong><span>图中个体 Alpha 峰频</span></div>
+                <div><strong>+9.05 <small>dB</small></strong><span>图中平均配对功率变化</span></div>
+                <div><strong>3 / 3</strong><span>所示枕区通道均增强</span></div>
+              </div>
+              <div class="method-note"><b>本次验证支持什么？</b><p>系统记录到了随睁闭眼状态变化的枕区 Alpha 特征，支持电极、采集硬件与频谱分析链路能够保留这类生理响应。</p></div>
+            </div>
+            <figure class="result-figure reveal">
+              <button class="image-button paper-image" type="button" data-lightbox="assets/images/alpha-results.webp" data-caption="Alpha 结果：A 功率谱；B 三通道频带功率；C 配对功率变化；D 随时间变化" aria-label="放大闭眼 Alpha 实验结果图">
+                <img src="assets/images/alpha-results.webp" alt="闭眼条件在约10.5 Hz形成明显峰值，Oz、O1、O2的Alpha频带功率均高于睁眼条件" loading="lazy" />
+                <span class="zoom-hint">放大实验结果图 ↗</span>
+              </button>
+              <figcaption><b>怎样读这张图</b><span>A 看 10.5 Hz 附近的峰；B 看三个通道是否一致；C 看睁闭眼配对变化；D 看差异能否持续，而非只出现在切换瞬间。</span></figcaption>
+            </figure>
+          </div>
+          <div class="validation-explain reveal">
+            <div>
+              <h4>怎么验证</h4>
+              <ol class="validation-steps">
+                <li><b>建立睁眼与闭眼对照</b><p>在 Oz、O1、O2 记录两种状态。图示每轮为 3 秒准备、6 秒记录、2 秒休息，Marker 标记状态及记录阶段。</p></li>
+                <li><b>比较同一频带的功率</b><p>按 Marker 取出稳定记录段，检查眼动、肌电和电极松动等干扰。用功率谱（PSD）观察能量分布，比较两种状态的 8–13 Hz 频带功率。</p></li>
+                <li><b>同时看频率、通道和时间</b><p>图中闭眼峰位于约 10.5 Hz，三通道均有增强，配对变化均值为 +9.05 dB。多角度一致的变化，比单看一段波形更有说服力。</p></li>
+              </ol>
+            </div>
+            <div class="validation-use">
+              <h4>可以用来做什么</h4>
+              <p><b>采集系统调试：</b>用容易执行的睁闭眼任务检查能否观察到预期响应，并辅助比较电极布置和采集设置。</p>
+              <p><b>状态变化研究：</b>为睁闭眼状态区分、静息态节律分析提供特征；是否能稳定分类，还需要独立数据验证。</p>
+              <p><b>个体频率参考：</b>提取个人 Alpha 峰频，为后续围绕该频段的实验分析提供参考。</p>
+              <p class="validation-limit">Alpha 强弱有个体差异，未观察到明显增强时，应结合电极接触、记录状态和重复实验判断；不能据此直接判定设备失效或给出健康结论。</p>
+            </div>
+          </div>
+          <div class="support-gallery reveal">
+            <figure>
+              <button class="image-button" type="button" data-lightbox="assets/images/alpha-montage.webp" data-caption="图示电极布置：Oz、O1、O2；Fp1 为 REF，Fp2 为 BIAS" aria-label="放大 Alpha 电极布置图"><img src="assets/images/alpha-montage.webp" alt="Alpha实验电极布置，标出Oz、O1、O2枕区通道及参考、偏置电极" loading="lazy" /></button>
+              <figcaption><b>电极布置</b><span>观察枕区节律</span></figcaption>
+            </figure>
+            <figure>
+              <button class="image-button" type="button" data-lightbox="assets/images/alpha-protocol.webp" data-caption="睁闭眼实验：3秒准备、6秒记录、2秒休息，以及三通道时域波形" aria-label="放大 Alpha 实验流程图"><img src="assets/images/alpha-protocol.webp" alt="睁闭眼单轮实验时间线，以及闭眼和睁眼条件下的三通道脑电波形" loading="lazy" /></button>
+              <figcaption><b>范式与波形</b><span>3 s 准备 / 6 s 记录 / 2 s 休息</span></figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <article id="ssvep-validation" class="case-study">
+          <div class="case-index reveal"><span>实验 02 / 诱发响应</span><b>15 Hz SSVEP</b></div>
+          <div class="case-layout reverse">
+            <figure class="result-figure reveal">
+              <button class="image-button paper-image" type="button" data-lightbox="assets/images/ssvep-results.webp" data-caption="SSVEP 结果：A 阶段频谱对照；B 通道频谱；C 逐轮15 Hz信噪比；D 事件相关时频响应" aria-label="放大 SSVEP 实验结果图">
+                <img src="assets/images/ssvep-results.webp" alt="刺激期间15 Hz响应增强，三个通道各轮信噪比为正，时频图显示刺激开始后的持续15 Hz能量带" loading="lazy" />
+                <span class="zoom-hint">放大实验结果图 ↗</span>
+              </button>
+              <figcaption><b>怎样读这张图</b><span>A/B 看 15 Hz 目标频率；C 看各轮信噪比；D 看增强是否与刺激时段一致。30 Hz 附近在背景阶段也有峰，单凭该峰不能认定刺激谐波。</span></figcaption>
+            </figure>
+            <div class="case-copy reveal">
+              <p class="eyebrow">STEADY-STATE VISUAL EVOKED POTENTIAL</p>
+              <h3>注视周期刺激，<br />观察脑电的跟随响应。</h3>
+              <p>SSVEP 即稳态视觉诱发电位。注视以固定频率变化的视觉目标时，枕区脑电可在相同频率及其谐波上出现响应。这里使用 15 Hz 刺激，检验采集系统能否记录与刺激频率对应的特征。<a class="inline-reference" href="https://arxiv.org/abs/2104.12187" target="_blank" rel="noreferrer" aria-label="阅读 SSVEP 多频刺激研究">[2]</a></p>
+              <div class="metric-stack">
+                <div><strong>15 <small>Hz</small></strong><span>本次刺激目标频率</span></div>
+                <div><strong>10</strong><span>重复实验轮次</span></div>
+                <div><strong>0.5–6 <small>s</small></strong><span>图中刺激期频谱取段</span></div>
+              </div>
+              <div class="method-note"><b>本次验证支持什么？</b><p>刺激期的 15 Hz 峰和持续能量带，以及跨轮次的正信噪比，支持系统能够提取频率锁定的诱发响应，并按事件标记完成分析。</p></div>
+            </div>
+          </div>
+          <div class="validation-explain reveal">
+            <div>
+              <h4>怎么验证</h4>
+              <ol class="validation-steps">
+                <li><b>给定已知频率与时间窗口</b><p>图示共 10 轮，每轮 2 秒注视、6 秒 15 Hz 视觉刺激、3 秒休息，用 Marker 定位各阶段。</p></li>
+                <li><b>对照刺激前、刺激中和刺激后</b><p>比较各阶段频谱，在刺激后 0.5–6.0 秒稳定段检查 15 Hz 峰；结合相邻背景频率评估信噪比（SNR），避免只凭峰值判断。</p></li>
+                <li><b>检查重复性与时间对应关系</b><p>图中 Oz、O1、O2 各轮 15 Hz SNR 均大于 0 dB，时频图在刺激期间形成持续增强。验证时还应排查显示器串扰及其他与刺激同步的非脑电信号。</p></li>
+              </ol>
+            </div>
+            <div class="validation-use">
+              <h4>可以用来做什么</h4>
+              <p><b>诱发响应验证：</b>检查系统在已知目标频率上提取响应的能力，并辅助评估分段、频谱和时频分析流程。</p>
+              <p><b>脑机接口输入：</b>后续可设计多个不同频率的视觉目标，通过识别用户注视的目标，生成视觉键盘、菜单选择或外部设备控制指令。</p>
+              <p><b>解码方法评估：</b>作为频率特征研究的起点，进一步比较不同通道、时间窗和识别算法对性能的影响。</p>
+              <p class="validation-limit">本次展示的是单一 15 Hz 诱发响应验证，尚不能据此宣称多目标识别准确率或控制性能；这些应用需要另做多频目标、在线解码和独立测试。</p>
+            </div>
+          </div>
+          <div class="support-gallery single reveal">
+            <figure>
+              <button class="image-button" type="button" data-lightbox="assets/images/ssvep-protocol.webp" data-caption="SSVEP 单轮时间线：2秒注视、6秒刺激、3秒休息；右图以刺激开始为0秒" aria-label="放大 SSVEP 实验流程与时域波形"><img src="assets/images/ssvep-protocol.webp" alt="15 Hz SSVEP实验时间线与Oz、O1、O2三个通道的时域脑电波形" loading="lazy" /></button>
+              <figcaption><b>范式与时域波形</b><span>Marker 对齐刺激时段</span></figcaption>
+            </figure>
+            <div class="protocol-card">
+              <p>ONE TRIAL / 单轮实验</p>
+              <ol>
+                <li><span>0–2 s</span><b>注视</b><small>记录刺激前基线</small></li>
+                <li><span>2–8 s</span><b>15 Hz 刺激</b><small>观察频率锁定响应</small></li>
+                <li><span>8–11 s</span><b>休息</b><small>观察刺激后变化</small></li>
+              </ol>
+            </div>
+          </div>
+        </article>
+        <p class="validation-references">实验数值与结论解读来自本页所示项目图片；通用原理参考：<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4512209/" target="_blank" rel="noreferrer">[1] Alpha 用于 EEG 采集可行性验证</a> · <a href="https://arxiv.org/abs/2104.12187" target="_blank" rel="noreferrer">[2] SSVEP 多频刺激与脑机接口研究</a>。图示未提供被试规模和显著性检验，本页不据此推断总体统计显著性。</p>
+      </section>
+
       <section id="demo" class="demo-section section-space">
         <div class="section-shell demo-grid">
           <div class="demo-copy reveal">
