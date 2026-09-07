@@ -45,6 +45,6 @@ styles.css
 script.js
 ```
 
-所有页面链接使用相对路径，可直接打开或部署至 GitHub Pages。视频使用原生控件且不自动播放、不预加载；图片使用 WebP 并支持点击放大。
+所有页面链接使用相对路径，可直接打开或部署至 GitHub Pages。视频由原始 HEVC 转为 H.264 / AAC，并将 MP4 索引放在文件开头以支持快速起播；使用原生控件且不自动播放、不预加载。原视频备份保存在本地 `.preview/original-videos/`。图片使用 WebP 并支持点击放大。
 
 简历 PDF 仅作为内容来源，已通过 `.gitignore` 排除，不随网站上传；网页不展示电话、年龄等个人信息。原始 PNG 与 `.preview/` 临时文件也不上传。`eeg-experiment.webp` 沿用已有的桌面证件区域模糊处理。
