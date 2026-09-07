@@ -16,7 +16,7 @@
     <meta property="og:image" content="assets/images/eeg-experiment.webp" />
     <title>陈庆标｜脑电采集与经颅电刺激作品集</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="styles.css?v=headings-20260907" />
+    <link rel="stylesheet" href="styles.css?v=engineering-20260907" />
     <script src="script.js" defer></script>
   </head>
   <body>
@@ -114,9 +114,30 @@
         </div>
         <h3 class="outcome-label">工程落地成果</h3>
         <div class="engineering-grid reveal">
-          <article><span>01 / 同步与传输</span><div class="engineering-value">83 <small>μs ± 2 μs</small></div><h3>CAN FD 触发延迟</h3><p>USB 上传最高 <b>12.5 Mbit/s</b>，项目测试中未观察到丢包。</p></article>
-          <article><span>02 / 升级与恢复</span><div class="engineering-value">1,000 <small>次</small></div><h3>固件升级测试</h3><p>CAN FD IAP 配合 A/B 应用区、厂家恢复区及双备份启动状态，实现校验、回滚与恢复。</p></article>
-          <article><span>03 / 成本与功耗</span><div class="engineering-value">5<small>%</small></div><h3>硬件成本降至原方案的 5%</h3><p>完成产品替代，硬件成本约 <b>3,000 元</b>；空闲低功耗策略使整机功耗从 <b>1.8 W 降至 0.76 W</b>。</p></article>
+          <article>
+            <span>01 / 硬件设计</span>
+            <div class="engineering-value">4 <small>层 PCB</small></div>
+            <h3>模拟采集板与主控板设计</h3>
+            <p>完成两块板的原理图与 PCB 设计、PCBA 打样和整机联调，单套硬件成本约 <b>3,000 元</b>。</p>
+          </article>
+          <article>
+            <span>02 / 脑电采集</span>
+            <div class="engineering-value">64 <small>通道</small></div>
+            <h3>ADS1299 菊花链采集</h3>
+            <p>基于 EXTI、DMA 与 SPI 完成采集驱动，实现脑电数据同步采集、解析、IIR 滤波与上传。</p>
+          </article>
+          <article>
+            <span>03 / 在线升级</span>
+            <div class="engineering-value">1,000 <small>次</small></div>
+            <h3>IAP 在线升级与故障恢复</h3>
+            <p>基于 CAN FD 开发 IAP Bootloader，结合 A/B 应用区、厂家恢复区、双备份 BootState 与 IWDG，实现校验、回滚和故障恢复。</p>
+          </article>
+          <article>
+            <span>04 / 低功耗管理</span>
+            <div class="engineering-value">0.76 <small>W</small></div>
+            <h3>整机低功耗管理</h3>
+            <p>协同 ADS1299 STANDBY、MCU Sleep 与 FreeRTOS Tickless，功耗由 <b>1.8 W</b> 降至 <b>0.76 W</b>，CAN 唤醒延迟 <b>52 μs</b>。</p>
+          </article>
         </div>
 
         <div class="pipeline reveal">

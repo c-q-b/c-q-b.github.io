@@ -1438,7 +1438,7 @@ button {
 #overview .stat-grid article { padding: 30px 24px; }
 #overview .stat-grid strong { font-size: clamp(2.6rem, 4.6vw, 4.5rem); white-space: nowrap; }
 #overview .stat-grid span { font-size: 1.125rem; line-height: 1.5; margin-top: 18px; }
-#overview .engineering-grid { gap: 20px; margin-top: 24px; }
+#overview .engineering-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; margin-top: 24px; }
 #overview .engineering-grid article { padding: clamp(24px, 2.5vw, 32px); background: var(--white); border: 1px solid var(--line); border-top: 3px solid var(--teal); }
 #overview .engineering-grid article > span { font-size: 1rem; letter-spacing: 0; font-weight: 700; }
 #overview .engineering-value { margin-top: 26px; font-family: var(--display); font-size: clamp(2.7rem, 4vw, 3.7rem); font-weight: 800; letter-spacing: -0.045em; line-height: 1.15; }
@@ -1462,6 +1462,7 @@ button {
 @media (max-width: 780px) {
   #overview .stat-grid article { padding: 24px 16px; }
   #overview .stat-grid span { font-size: 1rem; }
+  #overview .engineering-grid { grid-template-columns: 1fr; }
   #overview .pipeline li { display: flex; align-items: center; gap: 20px; min-height: 72px; }
   #overview .pipeline li > span { margin: 0; }
   #overview .engineering-grid article + article { border-top: 3px solid var(--teal); }
