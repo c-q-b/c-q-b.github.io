@@ -134,7 +134,7 @@
         <div class="section-shell">
           <div class="section-kicker reveal">
             <span>01</span>
-            <p>HARDWARE &amp; HUMAN TEST</p>
+            <p>PCB DESIGN &amp; ACQUISITION SYSTEM</p>
           </div>
 
           <div class="hardware-grid">
@@ -159,17 +159,36 @@
             </figure>
 
             <div class="hardware-copy reveal" data-delay="100">
-              <p class="eyebrow">ACQUISITION HARDWARE</p>
-              <h2>从采集板设计，<br />到同步数据上传。</h2>
+              <p class="eyebrow">PCB 硬件设计</p>
+              <h2>模拟采集 × 数字处理<br />两块板，一条采集链路。</h2>
               <p class="lead">
-                完成模拟采集板、主控板原理图与四层 PCB 设计，以及 PCBA 打样和整机联调。基于 ADS1299 菊花链建立同步采集链路，连接多通道电极与上位机。
+                将模拟采集与数字处理分板设计，构成脑电下位机。完成原理图、四层 PCB、PCBA 打样与整机联调。
               </p>
-              <dl class="feature-list">
-                <div><dt>同步采集</dt><dd>EXTI + DMA + SPI 驱动 ADS1299，实现数据解析、IIR 滤波与上传。</dd></div>
-                <div><dt>多设备协同</dt><dd>USB / CAN FD 协议支持节点寻址、广播控制与 Trigger 同步触发。</dd></div>
-                <div><dt>调试与维护</dt><dd>UART + DMA + 空闲中断接收调试命令，带时间戳日志辅助异常定位。</dd></div>
-                <div><dt>低功耗运行</dt><dd>ADS1299 STANDBY、MCU Sleep 与 FreeRTOS Tickless 协同，支持 CAN 中断唤醒。</dd></div>
-              </dl>
+              <div class="pcb-boards">
+                <article>
+                  <span class="pcb-number">01</span>
+                  <div><h3>ADS1299 菊花链采集板</h3><p>连接多通道电极，通过 ADS1299 菊花链实现同步采样，经 SPI 将脑电数据送入数字处理板。</p></div>
+                </article>
+                <article>
+                  <span class="pcb-number">02</span>
+                  <div><h3>STM32H743 数字处理板</h3><p>以 STM32H743 最小系统为核心，通过 EXTI + SPI + DMA 接收采样数据，完成数据解析、IIR 滤波与上传调度。</p></div>
+                </article>
+              </div>
+            </div>
+          </div>
+
+          <div class="pcb-peripherals reveal">
+            <div class="pcb-block-heading"><h3>通信接口</h3><p>数据上传、命令控制与日志输出，各司其职。</p></div>
+            <dl class="pcb-interfaces">
+              <div><dt>USB 2.0 HS</dt><dd><strong>脑电数据上传</strong><p>将采集数据传输至上位机，用于波形显示、记录与分析。</p></dd></div>
+              <div><dt>CAN FD</dt><dd><strong>命令控制</strong><p>支持设备寻址、广播控制与 Trigger 同步触发。</p></dd></div>
+              <div><dt>UART</dt><dd><strong>运行日志</strong><p>输出带时间戳的运行日志，辅助调试与异常定位。</p></dd></div>
+            </dl>
+            <div class="pcb-power">
+              <div><h3>电源设计</h3><p>支持 USB 供电或 5–12 V 电池供电，板载 DC-DC 与 LDO 完成电源转换和稳压。</p></div>
+              <div class="pcb-power-path" aria-label="USB 或 5至12伏电池输入，经板载 DC-DC 与 LDO 为采集与数字系统供电">
+                <span>USB / 5–12 V 电池</span><b aria-hidden="true">→</b><span>DC-DC + LDO</span><b aria-hidden="true">→</b><span>采集与数字系统</span>
+              </div>
             </div>
           </div>
 
