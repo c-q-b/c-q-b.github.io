@@ -41,7 +41,7 @@ def main() -> None:
         {
             reference
             for reference in parser.local_references
-            if not (PROJECT_DIR / unquote(reference.split("#", 1)[0])).is_file()
+            if not (PROJECT_DIR / unquote(urlparse(reference).path)).is_file()
         }
     )
 

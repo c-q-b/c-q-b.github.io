@@ -14,6 +14,9 @@
   --display: "Arial Narrow", "Microsoft YaHei UI", "PingFang SC", sans-serif;
   --body: Inter, "Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif;
   --max: 1240px;
+  --heading-section: clamp(1.6rem, 3.4vw, 2.75rem);
+  --heading-subsection: clamp(1.75rem, 2.7vw, 2.25rem);
+  --heading-card: clamp(1.5rem, 2.2vw, 1.85rem);
 }
 
 * {
@@ -258,9 +261,9 @@ button {
 .eyebrow {
   margin: 0 0 22px;
   color: var(--teal);
-  font-size: 0.72rem;
+  font-size: 1rem;
   font-weight: 800;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
@@ -779,7 +782,8 @@ button {
 }
 
 .feature-list dt {
-  font-size: 0.86rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
   font-weight: 700;
 }
 
@@ -793,14 +797,16 @@ button {
   gap: clamp(36px, 5vw, 76px);
 }
 
-#hardware .section-kicker p {
+.section-kicker p {
   color: var(--white);
-  font-size: clamp(1.4rem, 3.4vw, 2.75rem);
+  font-size: var(--heading-section);
   line-height: 1.2;
   letter-spacing: 0.015em;
 }
 
-#hardware .section-kicker > span { flex-shrink: 0; }
+.section-kicker > span { flex-shrink: 0; }
+
+#hardware .hardware-copy .eyebrow { font-size: 1.25rem; }
 
 #hardware .hardware-copy h2 {
   font-size: clamp(2rem, 3.4vw, 3.25rem);
@@ -836,7 +842,7 @@ button {
 
 .pcb-boards h3 {
   margin: 0 0 12px;
-  font-size: clamp(1.4rem, 2vw, 1.75rem);
+  font-size: var(--heading-card);
   line-height: 1.35;
 }
 
@@ -854,7 +860,7 @@ button {
 
 .firmware-design > h3 { margin: 0 0 16px; font-size: clamp(2rem, 3.4vw, 3rem); line-height: 1.3; }
 .firmware-design p:not(.eyebrow) { margin: 0; color: rgba(255, 255, 255, 0.74); font-size: 1.125rem; line-height: 1.8; }
-.firmware-design h4 { margin: 0 0 12px; font-size: clamp(1.35rem, 2vw, 1.65rem); line-height: 1.4; }
+.firmware-design h4 { margin: 0 0 12px; font-size: var(--heading-card); line-height: 1.4; }
 
 .firmware-flow {
   display: grid;
@@ -906,7 +912,7 @@ button {
 
 .experiment-copy > span {
   color: var(--teal);
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-weight: 800;
   letter-spacing: 0.15em;
 }
@@ -981,7 +987,7 @@ button {
 .experiment-findings li::marker { color: var(--teal); }
 .experiment-stage > .experiment-conclusion { max-width: none; padding: 22px 26px; color: var(--ink); background: rgba(22, 168, 139, .075); border-left: 4px solid var(--teal); }
 .experiment-applications { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
-.experiment-applications h5 { margin: 0 0 12px; font-size: 1.4rem; }
+.experiment-applications h5 { margin: 0 0 16px; font-size: var(--heading-card); line-height: 1.4; }
 .experiment-applications p { margin: 0; color: var(--muted); }
 .experiment-notes { margin-top: 60px; padding-top: 22px; border-top: 1px solid var(--line); color: var(--muted); }
 .experiment-notes summary { color: var(--ink); cursor: pointer; font-size: 1.125rem; }
@@ -1424,10 +1430,10 @@ button {
 .overview-roles { display: flex; flex-wrap: wrap; gap: 10px; padding: 0; margin: 28px 0 0; list-style: none; }
 .overview-roles li { padding: 7px 12px; border: 1px solid var(--line); font-size: 1rem; color: var(--muted); }
 .overview-background { padding-left: 28px; border-left: 3px solid var(--teal); }
-.overview-background h3 { margin: 0 0 14px; font-size: 1.5rem; }
+.overview-background h3 { margin: 0 0 18px; font-size: var(--heading-subsection); line-height: 1.3; }
 .overview-background p { margin: 0; font-size: 1.125rem; line-height: 1.85; color: var(--muted); }
 .overview-background p + p { margin-top: 14px; }
-#overview .outcome-label { margin-top: 56px; font-size: clamp(1.6rem, 2.5vw, 2rem); }
+#overview .outcome-label { margin-top: 56px; font-size: var(--heading-subsection); }
 #overview .stat-grid { background: rgba(255, 255, 255, 0.65); }
 #overview .stat-grid article { padding: 30px 24px; }
 #overview .stat-grid strong { font-size: clamp(2.6rem, 4.6vw, 4.5rem); white-space: nowrap; }
@@ -1437,13 +1443,13 @@ button {
 #overview .engineering-grid article > span { font-size: 1rem; letter-spacing: 0; font-weight: 700; }
 #overview .engineering-value { margin-top: 26px; font-family: var(--display); font-size: clamp(2.7rem, 4vw, 3.7rem); font-weight: 800; letter-spacing: -0.045em; line-height: 1.15; }
 #overview .engineering-value small { font-size: 0.42em; letter-spacing: 0; white-space: nowrap; }
-#overview .engineering-grid h3 { margin: 14px 0 18px; font-size: 1.4rem; line-height: 1.4; }
+#overview .engineering-grid h3 { margin: 14px 0 18px; font-size: var(--heading-card); line-height: 1.4; }
 #overview .engineering-grid p { font-size: 1.125rem; line-height: 1.8; }
 #overview .engineering-grid p b { color: var(--ink); font-weight: 600; }
 #overview .pipeline { grid-template-columns: 1fr; gap: 24px; margin-top: 56px; }
 #overview .pipeline-title { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 12px; padding-top: 24px; border-top: 1px solid var(--line); }
 #overview .pipeline-title span { font-size: 1.125rem; letter-spacing: 0; }
-#overview .pipeline-title p { margin: 0; font-size: 1.5rem; }
+#overview .pipeline-title p { margin: 0; font-size: var(--heading-card); }
 #overview .pipeline li { padding: 20px 24px; min-height: 118px; }
 #overview .pipeline b { font-size: 1rem; }
 #overview .pipeline li > span { margin-top: 16px; font-size: 1.25rem; }
@@ -1465,16 +1471,16 @@ button {
 .reveal.will-reveal:not(.is-visible) { opacity: 0; transform: translateY(24px); }
 .dark-section::after { pointer-events: none; }
 .project-role { font-size: .85rem; color: var(--muted); margin-top: 24px; }
-.background-label { font-size: 1rem; margin: 34px 0 0; }
+.background-label { font-size: var(--heading-subsection); line-height: 1.3; margin: 34px 0 0; }
 .section-heading .background-label + p { margin-top: 12px; }
-.outcome-label { margin: 52px 0 0; font-size: 1.1rem; }
-.outcome-label span { margin-left: 16px; color: var(--muted); font-size: .8rem; font-weight: 400; }
+.outcome-label { margin: 52px 0 0; font-size: var(--heading-subsection); line-height: 1.3; }
+.outcome-label span { margin-left: 16px; color: var(--muted); font-size: 1rem; font-weight: 400; }
 .outcome-label + .stat-grid { margin-top: 22px; }
 .stat-grid strong small { font-size: .4em; letter-spacing: 0; }
 .engineering-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; margin-top: 36px; }
 .engineering-grid article { padding: 8px 0 18px; }
-.engineering-grid article > span { font-size: .7rem; letter-spacing: .08em; color: var(--teal); }
-.engineering-grid h3 { margin: 15px 0 10px; font-size: 1.25rem; letter-spacing: -.03em; }
+.engineering-grid article > span { font-size: 1rem; letter-spacing: .08em; color: var(--teal); }
+.engineering-grid h3 { margin: 15px 0 16px; font-size: var(--heading-card); line-height: 1.4; letter-spacing: -.03em; }
 .engineering-grid p { margin: 0; color: var(--muted); font-size: .88rem; }
 .source-note { font-size: .74rem; color: var(--muted); margin: 22px 0 0; }
 .stimulation-section { --teal: #ae531e; }
