@@ -16,7 +16,7 @@
     <meta property="og:image" content="assets/images/eeg-experiment.webp" />
     <title>陈庆标｜脑电采集与经颅电刺激作品集</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="styles.css?v=engineering-20260907" />
+    <link rel="stylesheet" href="styles.css?v=experiments-20260907" />
     <script src="script.js" defer></script>
   </head>
   <body>
@@ -221,7 +221,6 @@
 
       <section id="eeg-validation" class="results-section section-shell section-space">
         <div class="section-heading reveal">
-          <p class="eyebrow">01 / EEG</p>
           <h2>脑电实验验证</h2>
           <p>通过闭眼 Alpha 波和 SSVEP，验证 Oz、O1、O2 三个枕区通道的脑电响应。</p>
         </div>
@@ -237,7 +236,6 @@
             />
           </div>
           <div class="experiment-copy">
-            <span>EXPERIMENT SETUP</span>
             <h3>实验现场与采集流程</h3>
             <p>
               被试佩戴脑电帽观看刺激屏幕；另一屏实时检查多通道波形与频谱。硬件、范式和数据分析在同一实验链路中闭环验证。
@@ -251,10 +249,10 @@
         </div>
 
         <article id="alpha-validation" class="experiment-study">
-          <header class="experiment-heading reveal"><span>01</span><h3>闭眼 Alpha 波实验</h3></header>
+          <header class="experiment-heading reveal"><h3>闭眼 Alpha 波实验</h3></header>
 
           <section class="experiment-stage reveal" aria-labelledby="alpha-flow">
-            <h4 id="alpha-flow"><span>01</span>实验流程</h4>
+            <h4 id="alpha-flow">实验流程</h4>
             <p>分别记录睁眼和闭眼状态下的脑电，用事件标记定位记录时段，对比两种状态的 8–13 Hz Alpha 功率。</p>
             <figure class="experiment-montage" id="alpha-electrode-layout">
               <button class="image-button paper-image" type="button" data-lightbox="assets/images/alpha-montage.webp" data-caption="枕区通道 Oz、O1、O2；Fp1 为 REF，Fp2 为 BIAS" aria-label="放大 Alpha 电极布置图"><img src="assets/images/alpha-montage.webp" alt="Alpha实验电极布置：Oz、O1、O2枕区通道与参考、偏置电极" loading="lazy" /></button>
@@ -272,7 +270,7 @@
           </section>
 
           <section class="experiment-stage reveal" aria-labelledby="alpha-analysis">
-            <h4 id="alpha-analysis"><span>02</span>实验结果分析</h4>
+            <h4 id="alpha-analysis">实验结果分析</h4>
             <div class="metric-stack">
               <div><strong>10.5 <small>Hz</small></strong><span>Alpha 峰频</span></div>
               <div><strong>+9.05 <small>dB</small></strong><span>平均配对功率变化</span></div>
@@ -290,7 +288,7 @@
           </section>
 
           <section class="experiment-stage reveal" aria-labelledby="alpha-uses">
-            <h4 id="alpha-uses"><span>03</span>可以用来做什么</h4>
+            <h4 id="alpha-uses">可以用来做什么</h4>
             <div class="experiment-applications">
               <div><h5>采集系统调试</h5><p>检查能否记录到预期脑电响应，辅助比较电极布置与采集设置。</p></div>
               <div><h5>状态变化研究</h5><p>为睁闭眼状态区分、静息态节律分析提供特征。</p></div>
@@ -300,10 +298,10 @@
         </article>
 
         <article id="ssvep-validation" class="experiment-study">
-          <header class="experiment-heading reveal"><span>02</span><h3>15 Hz SSVEP 实验</h3></header>
+          <header class="experiment-heading reveal"><h3>15 Hz SSVEP 实验</h3></header>
 
           <section class="experiment-stage reveal" aria-labelledby="ssvep-flow">
-            <h4 id="ssvep-flow"><span>01</span>实验流程</h4>
+            <h4 id="ssvep-flow">实验流程</h4>
             <p>注视 15 Hz 周期变化的视觉目标，共进行 10 轮实验。用事件标记对齐刺激前、刺激中和刺激后的脑电。</p>
             <ol class="experiment-timeline" aria-label="SSVEP 单轮实验时间线">
               <li><strong>2 秒</strong><span>注视</span></li>
@@ -317,7 +315,7 @@
           </section>
 
           <section class="experiment-stage reveal" aria-labelledby="ssvep-analysis">
-            <h4 id="ssvep-analysis"><span>02</span>实验结果分析</h4>
+            <h4 id="ssvep-analysis">实验结果分析</h4>
             <div class="metric-stack">
               <div><strong>15 <small>Hz</small></strong><span>目标频率响应增强</span></div>
               <div><strong>10 <small>轮</small></strong><span>所示各轮 SNR 均为正</span></div>
@@ -335,7 +333,7 @@
           </section>
 
           <section class="experiment-stage reveal" aria-labelledby="ssvep-uses">
-            <h4 id="ssvep-uses"><span>03</span>可以用来做什么</h4>
+            <h4 id="ssvep-uses">可以用来做什么</h4>
             <div class="experiment-applications">
               <div><h5>诱发响应验证</h5><p>检查目标频率提取，以及事件分段、频谱分析流程。</p></div>
               <div><h5>脑机接口输入</h5><p>后续扩展多频目标，探索视觉键盘、菜单选择与设备指令。</p></div>
@@ -354,7 +352,6 @@
       <section id="demo" class="demo-section section-space">
         <div class="section-shell demo-grid">
           <div class="demo-copy reveal">
-            <p class="eyebrow">01 / EEG · SYSTEM DEMO</p>
             <h2>从佩戴，到看见实时脑电。</h2>
             <p>
               视频记录了脑电帽、电极连接、采集硬件和上位机界面的实际运行过程。点击播放，查看完整系统演示。
