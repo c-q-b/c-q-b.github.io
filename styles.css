@@ -267,14 +267,6 @@ button {
   text-transform: uppercase;
 }
 
-.hero .eyebrow {
-  color: rgba(255, 255, 255, 0.58);
-}
-
-.hero .eyebrow span {
-  color: var(--mint);
-}
-
 .hero h1,
 .section-heading h2,
 .hardware-copy h2,
