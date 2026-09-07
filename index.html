@@ -92,40 +92,44 @@
       </section>
 
       <section id="overview" class="overview section-shell section-space">
-        <div class="section-heading reveal">
-          <p class="eyebrow">01 / EEG ACQUISITION · 2025.12—2026.06</p>
-          <h2>64 通道高密度脑电<br />采集与多设备协同平台</h2>
-          <p class="project-role">负责内容：嵌入式软硬件研发 · 模拟采集板与主控板 · 系统联调</p>
-          <h3 class="background-label">项目背景</h3>
-          <p>
-            面向原有脑电产品升级替代与脑机接口、神经调控需求，研发 64 通道高密度脑电采集设备。将脑电采集、外部触发与智能终端统一连接，为神经意图解码和闭环控制提供底层数据支撑。
-          </p>
+        <div class="overview-intro reveal">
+          <div class="section-heading">
+            <p class="eyebrow">01 / EEG ACQUISITION · 2025.12—2026.06</p>
+            <h2>64 通道高密度脑电<br />采集与多设备协同平台</h2>
+            <ul class="overview-roles" aria-label="负责内容"><li>嵌入式固件</li><li>模拟采集与主控 PCB</li><li>系统联调</li></ul>
+          </div>
+          <div class="overview-background">
+            <h3>项目背景</h3>
+            <p>面向原有脑电产品升级，以及脑机接口与神经调控需求，研发 64 通道高密度脑电采集设备。</p>
+            <p>连接脑电采集、外部触发与智能终端，为神经意图解码和闭环控制提供数据支撑。</p>
+          </div>
         </div>
 
-        <h3 class="outcome-label">研发成果 <span>硬件指标与工程落地</span></h3>
+        <h3 class="outcome-label">核心采集指标</h3>
         <div class="stat-grid reveal" data-delay="100">
           <article><strong>64</strong><span>通道同步脑电采集</span></article>
           <article><strong>112 <small>dB</small></strong><span>共模抑制比</span></article>
-          <article><strong>1.7 <small>μVpp</small></strong><span>噪声</span></article>
+          <article><strong>1.7 <small>μVpp</small></strong><span>采集噪声</span></article>
           <article><strong>±5<small>%</small></strong><span>微伏级信号检测误差范围</span></article>
         </div>
+        <h3 class="outcome-label">工程落地成果</h3>
         <div class="engineering-grid reveal">
-          <article><span>01 / 同步与传输</span><h3>83 μs ± 2 μs</h3><p>CAN FD 触发延迟；USB 数据上传最高 12.5 Mbit/s，项目测试中未观察到丢包。</p></article>
-          <article><span>02 / 升级与恢复</span><h3>1,000 次升级测试</h3><p>CAN FD IAP、A/B 应用区与厂家恢复区，配合双备份启动状态，实现校验、回滚和故障恢复。</p></article>
-          <article><span>03 / 产品替代</span><h3>成本降至原方案的 5%</h3><p>完成产品替代，硬件成本约 3,000 元；空闲低功耗策略使整机功耗由 1.8 W 降至 0.76 W。</p></article>
+          <article><span>01 / 同步与传输</span><div class="engineering-value">83 <small>μs ± 2 μs</small></div><h3>CAN FD 触发延迟</h3><p>USB 上传最高 <b>12.5 Mbit/s</b>，项目测试中未观察到丢包。</p></article>
+          <article><span>02 / 升级与恢复</span><div class="engineering-value">1,000 <small>次</small></div><h3>固件升级测试</h3><p>CAN FD IAP 配合 A/B 应用区、厂家恢复区及双备份启动状态，实现校验、回滚与恢复。</p></article>
+          <article><span>03 / 成本与功耗</span><div class="engineering-value">5<small>%</small></div><h3>硬件成本降至原方案的 5%</h3><p>完成产品替代，硬件成本约 <b>3,000 元</b>；空闲低功耗策略使整机功耗从 <b>1.8 W 降至 0.76 W</b>。</p></article>
         </div>
 
         <div class="pipeline reveal">
           <div class="pipeline-title">
-            <span>END-TO-END</span>
-            <p>从电极到结论</p>
+            <span>系统链路</span>
+            <p>从采集到分析</p>
           </div>
           <ol>
-            <li><b>01</b><span>头皮电极<small>EEG CAP</small></span></li>
-            <li><b>02</b><span>采集硬件<small>PCB</small></span></li>
-            <li><b>03</b><span>事件同步<small>MARKER</small></span></li>
-            <li><b>04</b><span>范式实验<small>PROTOCOL</small></span></li>
-            <li><b>05</b><span>信号分析<small>PYTHON</small></span></li>
+            <li><b>01</b><span>头皮电极</span></li>
+            <li><b>02</b><span>采集硬件</span></li>
+            <li><b>03</b><span>事件同步</span></li>
+            <li><b>04</b><span>范式实验</span></li>
+            <li><b>05</b><span>信号分析</span></li>
           </ol>
         </div>
       </section>
