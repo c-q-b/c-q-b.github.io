@@ -877,7 +877,7 @@ button {
 .experiment-timeline li { padding: 22px 28px; background: rgba(22, 168, 139, .075); }
 .experiment-timeline strong { display: block; font-size: 2rem; color: var(--teal); }
 .experiment-timeline span { display: block; font-size: 1.125rem; }
-.experiment-protocol-grid { display: grid; grid-template-columns: minmax(0, 2.6fr) minmax(0, 1fr); gap: 24px; align-items: start; }
+.experiment-montage { width: min(100%, 540px); scroll-margin-top: 90px; }
 .experiment-stage figure { margin: 0; min-width: 0; }
 .experiment-stage figure img { width: 100%; height: auto; }
 .experiment-stage figcaption { margin-top: 12px; font-size: 1rem; color: var(--muted); }
@@ -899,8 +899,7 @@ button {
   .experiment-heading { gap: 14px; }
   .experiment-heading > span { font-size: 1.3rem; }
   .experiment-stage { margin-top: 42px; }
-  .experiment-protocol-grid, .experiment-applications { grid-template-columns: 1fr; }
-  .experiment-montage { max-width: 340px; }
+  .experiment-applications { grid-template-columns: 1fr; }
   .experiment-timeline li { padding: 16px 12px; }
   .experiment-timeline strong { font-size: 1.65rem; }
   .experiment-timeline span { font-size: 1rem; }

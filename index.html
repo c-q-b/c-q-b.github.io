@@ -212,21 +212,19 @@
           <section class="experiment-stage reveal" aria-labelledby="alpha-flow">
             <h4 id="alpha-flow"><span>01</span>实验流程</h4>
             <p>分别记录睁眼和闭眼状态下的脑电，用事件标记定位记录时段，对比两种状态的 8–13 Hz Alpha 功率。</p>
+            <figure class="experiment-montage" id="alpha-electrode-layout">
+              <button class="image-button paper-image" type="button" data-lightbox="assets/images/alpha-montage.webp" data-caption="枕区通道 Oz、O1、O2；Fp1 为 REF，Fp2 为 BIAS" aria-label="放大 Alpha 电极布置图"><img src="assets/images/alpha-montage.webp" alt="Alpha实验电极布置：Oz、O1、O2枕区通道与参考、偏置电极" loading="lazy" /></button>
+              <figcaption>电极放置位置</figcaption>
+            </figure>
             <ol class="experiment-timeline" aria-label="Alpha 单轮实验时间线">
               <li><strong>3 秒</strong><span>准备</span></li>
               <li><strong>6 秒</strong><span>睁眼或闭眼记录</span></li>
               <li><strong>2 秒</strong><span>休息</span></li>
             </ol>
-            <div class="experiment-protocol-grid">
-              <figure>
+              <figure class="experiment-protocol">
                 <button class="image-button paper-image" type="button" data-lightbox="assets/images/alpha-protocol.webp" data-caption="Alpha 实验流程及睁闭眼脑电波形" aria-label="放大 Alpha 实验流程图"><img src="assets/images/alpha-protocol.webp" alt="3秒准备、6秒记录、2秒休息的实验流程，以及睁闭眼条件下的Oz、O1、O2脑电波形" loading="lazy" /></button>
-                <figcaption>实验流程与睁闭眼波形</figcaption>
+                <figcaption>实验时序与时域波形</figcaption>
               </figure>
-              <figure class="experiment-montage">
-                <button class="image-button paper-image" type="button" data-lightbox="assets/images/alpha-montage.webp" data-caption="枕区通道 Oz、O1、O2；Fp1 为 REF，Fp2 为 BIAS" aria-label="放大 Alpha 电极布置图"><img src="assets/images/alpha-montage.webp" alt="Alpha实验电极布置：Oz、O1、O2枕区通道与参考、偏置电极" loading="lazy" /></button>
-                <figcaption>枕区电极布置</figcaption>
-              </figure>
-            </div>
           </section>
 
           <section class="experiment-stage reveal" aria-labelledby="alpha-analysis">
@@ -238,6 +236,7 @@
             </div>
             <figure class="experiment-result">
               <button class="image-button paper-image" type="button" data-lightbox="assets/images/alpha-results.webp" data-caption="Alpha 结果：A 功率谱；B 通道功率；C 配对变化；D 时间变化" aria-label="放大 Alpha 实验结果图"><img src="assets/images/alpha-results.webp" alt="闭眼条件在10.5 Hz形成峰值，三个枕区通道Alpha功率均增强，平均配对变化为9.05 dB" loading="lazy" /></button>
+              <figcaption>频域结果与 Alpha 功率变化</figcaption>
             </figure>
             <ul class="experiment-findings">
               <li><b>频率对得上：</b>闭眼后在约 10.5 Hz 出现明显峰值，位于 Alpha 频段。</li>
@@ -269,7 +268,7 @@
             </ol>
             <figure class="experiment-protocol">
               <button class="image-button paper-image" type="button" data-lightbox="assets/images/ssvep-protocol.webp" data-caption="SSVEP 单轮流程：2秒注视、6秒刺激、3秒休息" aria-label="放大 SSVEP 实验流程图"><img src="assets/images/ssvep-protocol.webp" alt="SSVEP实验时间线，以及与刺激开始、结束时刻对齐的三通道脑电" loading="lazy" /></button>
-              <figcaption>实验流程与三通道脑电</figcaption>
+              <figcaption>实验时序与时域波形</figcaption>
             </figure>
           </section>
 
@@ -282,6 +281,7 @@
             </div>
             <figure class="experiment-result">
               <button class="image-button paper-image" type="button" data-lightbox="assets/images/ssvep-results.webp" data-caption="SSVEP 结果：A 阶段频谱；B 通道频谱；C 逐轮信噪比；D 时频响应" aria-label="放大 SSVEP 实验结果图"><img src="assets/images/ssvep-results.webp" alt="刺激期15 Hz峰值增强，三个通道逐轮信噪比为正，时频图呈现持续15 Hz能量带" loading="lazy" /></button>
+              <figcaption>频域结果与刺激相关时频响应</figcaption>
             </figure>
             <ul class="experiment-findings">
               <li><b>频率对应：</b>刺激期间出现 15 Hz 峰，与视觉刺激频率一致。</li>
