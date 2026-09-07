@@ -177,21 +177,6 @@
             </div>
           </div>
 
-          <div class="pcb-peripherals reveal">
-            <div class="pcb-block-heading"><h3>通信接口</h3><p>数据上传、命令控制与日志输出，各司其职。</p></div>
-            <dl class="pcb-interfaces">
-              <div><dt>USB 2.0 HS</dt><dd><strong>脑电数据上传</strong><p>将采集数据传输至上位机，用于波形显示、记录与分析。</p></dd></div>
-              <div><dt>CAN FD</dt><dd><strong>命令控制</strong><p>连接控制端与其他设备，传递控制命令和同步触发指令。</p></dd></div>
-              <div><dt>UART</dt><dd><strong>运行日志</strong><p>提供串口调试通道，用于日志输出与设备维护。</p></dd></div>
-            </dl>
-            <div class="pcb-power">
-              <div><h3>电源设计</h3><p>支持 USB 供电或 5–12 V 电池供电，板载 DC-DC 与 LDO 完成电源转换和稳压。</p></div>
-              <div class="pcb-power-path" aria-label="USB 或 5至12伏电池输入，经板载 DC-DC 与 LDO 为采集与数字系统供电">
-                <span>USB / 5–12 V 电池</span><b aria-hidden="true">→</b><span>DC-DC + LDO</span><b aria-hidden="true">→</b><span>采集与数字系统</span>
-              </div>
-            </div>
-          </div>
-
           <div class="firmware-design reveal" aria-labelledby="firmware-title">
             <p class="eyebrow">STM32H743 / FreeRTOS</p>
             <h3 id="firmware-title">固件设计</h3>

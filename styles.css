@@ -800,8 +800,7 @@ button {
 }
 
 #hardware .hardware-copy .lead,
-.pcb-boards p,
-.pcb-peripherals p {
+.pcb-boards p {
   font-size: 1.125rem;
   line-height: 1.8;
   color: rgba(255, 255, 255, 0.74);
@@ -832,72 +831,8 @@ button {
   line-height: 1.35;
 }
 
-.pcb-boards p,
-.pcb-peripherals p {
+.pcb-boards p {
   margin: 0;
-}
-
-.pcb-peripherals {
-  position: relative;
-  z-index: 1;
-  margin-top: 64px;
-  padding-top: 44px;
-  border-top: 1px solid var(--line-light);
-}
-
-.pcb-peripherals h3 {
-  margin: 0 0 12px;
-  font-size: clamp(1.75rem, 3vw, 2.25rem);
-  line-height: 1.3;
-}
-
-.pcb-interfaces {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 36px;
-  margin: 32px 0 44px;
-}
-
-.pcb-interfaces > div {
-  padding: 22px 0 0;
-  border-top: 2px solid var(--mint);
-}
-
-.pcb-interfaces dt {
-  margin-bottom: 14px;
-  color: var(--mint);
-  font-size: clamp(1.6rem, 2.6vw, 2rem);
-  font-weight: 800;
-  line-height: 1.3;
-}
-
-.pcb-interfaces dd { margin: 0; }
-.pcb-interfaces strong { display: block; margin-bottom: 8px; font-size: 1.25rem; }
-
-.pcb-power {
-  padding: clamp(24px, 3vw, 40px);
-  background: var(--night-soft);
-  border: 1px solid var(--line-light);
-}
-
-.pcb-power-path {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 16px;
-  margin-top: 26px;
-  font-size: 1.125rem;
-  font-weight: 700;
-}
-
-.pcb-power-path span { padding: 12px 18px; border: 1px solid var(--line-light); }
-.pcb-power-path b { color: var(--mint); }
-
-@media (max-width: 780px) {
-  .pcb-interfaces { grid-template-columns: 1fr; gap: 26px; }
-  .pcb-peripherals { margin-top: 40px; padding-top: 32px; }
-  .pcb-power-path { flex-direction: column; align-items: stretch; gap: 8px; text-align: center; }
-  .pcb-power-path b { transform: rotate(90deg); align-self: center; }
 }
 
 .firmware-design {
