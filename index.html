@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="陈庆标的嵌入式软硬件作品：64通道高密度脑电采集系统与高电流高频经颅电刺激仪，展示项目背景、研发成果、实物与实验视频。"
+    />
+    <meta name="theme-color" content="#081311" />
+    <meta property="og:title" content="陈庆标｜脑电采集与经颅电刺激作品集" />
+    <meta
+      property="og:description"
+      content="从64通道脑电采集到4通道经颅电刺激：硬件设计、嵌入式开发与实验验证。"
+    />
+    <meta property="og:image" content="assets/images/eeg-experiment.webp" />
+    <title>陈庆标｜脑电采集与经颅电刺激作品集</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到主要内容</a>
+
+    <header class="site-header" data-header>
+      <a class="brand" href="#top" aria-label="返回顶部">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 42 42" role="img">
+            <path d="M4 22h7l3-10 5 20 5-24 5 18 3-8h6" />
+          </svg>
+        </span>
+        <span>
+          <strong>陈庆标 / CQB</strong>
+          <small>NEUROTECH PORTFOLIO</small>
+        </span>
+      </a>
+
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span>
+        <span class="sr-only">打开导航</span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="页面导航">
+        <a href="#overview">多通道脑电</a>
+        <a href="#results">脑电实验成果</a>
+        <a href="#stimulation">经颅电刺激</a>
+        <a href="#about">关于我</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section id="top" class="hero section-shell">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span>陈庆标 · 项目作品集</span> / EMBEDDED SYSTEMS</p>
+          <h1>从脑电采集，<br />到<em>经颅电刺激。</em></h1>
+          <p class="hero-intro">
+            专注神经工程设备的嵌入式软硬件研发。从原理图与 PCB、固件与通信，到整机联调和实验验证，记录两套设备的落地过程。
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#overview">01 · 多通道脑电 ↓</a>
+            <a class="button button-ghost" href="#stimulation">02 · 经颅电刺激 ↓</a>
+          </div>
+          <ul class="role-list" aria-label="项目工作内容">
+            <li>原理图 / PCB</li>
+            <li>FreeRTOS</li>
+            <li>驱动与通信</li>
+            <li>实验验证</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual reveal" data-delay="120">
+          <div class="hero-frame">
+            <img
+              src="assets/images/eeg-experiment.webp"
+              alt="佩戴脑电帽进行视觉刺激与脑电采集实验"
+              width="2000"
+              height="1500"
+              fetchpriority="high"
+            />
+            <span class="scan-line" aria-hidden="true"></span>
+            <div class="live-badge"><span></span> HUMAN EEG TEST</div>
+            <div class="hero-caption">
+              <span>01 / 实验现场</span>
+              <p>刺激显示、脑电采集与实时波形监测</p>
+            </div>
+          </div>
+          <div class="signal-card" aria-label="脑电波形装饰示意，非实时采集数据">
+            <div class="signal-card-head"><span>EEG / SIGNAL ILLUSTRATION</span><b>波形示意</b></div>
+            <svg viewBox="0 0 520 110" preserveAspectRatio="none" aria-hidden="true">
+              <path d="M0 60 20 58 34 62 46 56 58 66 69 22 77 91 87 45 99 68 115 54 130 61 145 57 158 64 169 31 179 80 191 53 206 61 224 55 240 65 255 56 268 60 282 53 296 67 309 58 322 59 335 52 347 70 361 42 374 75 388 55 402 61 418 56 432 66 448 54 463 60 478 51 493 64 520 57" />
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <section id="overview" class="overview section-shell section-space">
+        <div class="section-heading reveal">
+          <p class="eyebrow">01 / EEG ACQUISITION · 2025.12—2026.06</p>
+          <h2>64 通道高密度脑电<br />采集与多设备协同平台</h2>
+          <p class="project-role">负责内容：嵌入式软硬件研发 · 模拟采集板与主控板 · 系统联调</p>
+          <h3 class="background-label">项目背景</h3>
+          <p>
+            面向原有脑电产品升级替代与脑机接口、神经调控需求，研发 64 通道高密度脑电采集设备。将脑电采集、外部触发与智能终端统一连接，为神经意图解码和闭环控制提供底层数据支撑。
+          </p>
+        </div>
+
+        <h3 class="outcome-label">研发成果 <span>硬件指标与工程落地</span></h3>
+        <div class="stat-grid reveal" data-delay="100">
+          <article><strong>64</strong><span>通道同步脑电采集</span></article>
+          <article><strong>112 <small>dB</small></strong><span>共模抑制比</span></article>
+          <article><strong>1.7 <small>μVpp</small></strong><span>噪声</span></article>
+          <article><strong>±5<small>%</small></strong><span>微伏级信号检测误差范围</span></article>
+        </div>
+        <div class="engineering-grid reveal">
+          <article><span>01 / 同步与传输</span><h3>83 μs ± 2 μs</h3><p>CAN FD 触发延迟；USB 数据上传最高 12.5 Mbit/s，项目测试中未观察到丢包。</p></article>
+          <article><span>02 / 升级与恢复</span><h3>1,000 次升级测试</h3><p>CAN FD IAP、A/B 应用区与厂家恢复区，配合双备份启动状态，实现校验、回滚和故障恢复。</p></article>
+          <article><span>03 / 产品替代</span><h3>成本降至原方案的 5%</h3><p>完成产品替代，硬件成本约 3,000 元；空闲低功耗策略使整机功耗由 1.8 W 降至 0.76 W。</p></article>
+        </div>
+        <p class="source-note">工程指标及落地情况据个人项目履历整理；下方展示现有 Alpha、SSVEP 实验素材。</p>
+
+        <div class="pipeline reveal">
+          <div class="pipeline-title">
+            <span>END-TO-END</span>
+            <p>从电极到结论</p>
+          </div>
+          <ol>
+            <li><b>01</b><span>头皮电极<small>EEG CAP</small></span></li>
+            <li><b>02</b><span>采集硬件<small>PCB</small></span></li>
+            <li><b>03</b><span>事件同步<small>MARKER</small></span></li>
+            <li><b>04</b><span>范式实验<small>PROTOCOL</small></span></li>
+            <li><b>05</b><span>信号分析<small>PYTHON</small></span></li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="hardware" class="dark-section section-space">
+        <div class="section-shell">
+          <div class="section-kicker reveal">
+            <span>01</span>
+            <p>HARDWARE &amp; HUMAN TEST</p>
+          </div>
+
+          <div class="hardware-grid">
+            <figure class="hardware-photo reveal">
+              <button
+                class="image-button"
+                type="button"
+                data-lightbox="assets/images/eeg-hardware.webp"
+                data-caption="多通道脑电采集硬件与电极接口板"
+                aria-label="放大脑电采集硬件图片"
+              >
+                <img
+                  src="assets/images/eeg-hardware.webp"
+                  alt="脑电采集主板与多通道电极接口板"
+                  width="1500"
+                  height="2000"
+                  loading="lazy"
+                />
+                <span class="zoom-hint">点击查看全图 ↗</span>
+              </button>
+              <figcaption><span>采集硬件实物</span><small>多通道接口 / 数据传输 / 系统联调</small></figcaption>
+            </figure>
+
+            <div class="hardware-copy reveal" data-delay="100">
+              <p class="eyebrow">ACQUISITION HARDWARE</p>
+              <h2>从采集板设计，<br />到同步数据上传。</h2>
+              <p class="lead">
+                完成模拟采集板、主控板原理图与四层 PCB 设计，以及 PCBA 打样和整机联调。基于 ADS1299 菊花链建立同步采集链路，连接多通道电极与上位机。
+              </p>
+              <dl class="feature-list">
+                <div><dt>同步采集</dt><dd>EXTI + DMA + SPI 驱动 ADS1299，实现数据解析、IIR 滤波与上传。</dd></div>
+                <div><dt>多设备协同</dt><dd>USB / CAN FD 协议支持节点寻址、广播控制与 Trigger 同步触发。</dd></div>
+                <div><dt>调试与维护</dt><dd>UART + DMA + 空闲中断接收调试命令，带时间戳日志辅助异常定位。</dd></div>
+                <div><dt>低功耗运行</dt><dd>ADS1299 STANDBY、MCU Sleep 与 FreeRTOS Tickless 协同，支持 CAN 中断唤醒。</dd></div>
+              </dl>
+            </div>
+          </div>
+
+          <div class="experiment-strip reveal">
+            <div class="experiment-image">
+              <img
+                src="assets/images/eeg-experiment.webp"
+                alt="脑电帽、视觉刺激屏幕、采集上位机和采集硬件组成的实验现场"
+                width="2000"
+                height="1500"
+                loading="lazy"
+              />
+            </div>
+            <div class="experiment-copy">
+              <span>HUMAN EEG VALIDATION</span>
+              <h3>人体实验验证</h3>
+              <p>
+                被试佩戴脑电帽观看刺激屏幕；另一屏实时检查多通道波形与频谱。硬件、范式和数据分析在同一实验链路中闭环验证。
+              </p>
+              <ul>
+                <li>实验前检查电极连接与信号质量</li>
+                <li>刺激程序与采集程序并行运行</li>
+                <li>依据 Marker 自动切分各实验阶段</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="results" class="results-section section-shell section-space">
+        <div class="section-heading split-heading reveal">
+          <div>
+            <p class="eyebrow">01 / EEG · EXPERIMENTS &amp; RESULTS</p>
+            <h2>用两种经典范式，<br />验证真实脑电响应。</h2>
+          </div>
+          <p>
+            展示 Oz、O1、O2 三个枕区通道的实验结果：Alpha 实验比较睁闭眼节律，SSVEP 实验观察刺激锁定响应。图示实验使用 1 kHz 采样率。
+          </p>
+        </div>
+
+        <article id="alpha" class="case-study alpha-case">
+          <div class="case-index reveal"><span>CASE 01</span><b>ALPHA RHYTHM</b></div>
+          <div class="case-layout">
+            <div class="case-copy reveal">
+              <p class="eyebrow">EYES OPEN / EYES CLOSED</p>
+              <h3>睁眼—闭眼 Alpha 节律</h3>
+              <p>
+                在 Oz、O1、O2 枕区通道记录睁眼和闭眼状态。闭眼时视觉输入减少，8–13 Hz
+                Alpha 活动在本次记录中增强，用于脑电采集链路的生理信号验证。
+              </p>
+              <div class="metric-stack">
+                <div><strong>10.5 <small>Hz</small></strong><span>个体 Alpha 峰频</span></div>
+                <div><strong>+9.05 <small>dB</small></strong><span>闭眼平均功率变化</span></div>
+                <div><strong>3 / 3</strong><span>枕区通道一致增强</span></div>
+              </div>
+              <div class="method-note">
+                <b>分析路径</b>
+                <p>Marker 分段 → 预处理 → Welch 功率谱 → 8–13 Hz 积分 → 睁闭眼配对比较</p>
+              </div>
+            </div>
+
+            <figure class="result-figure reveal" data-delay="100">
+              <button
+                class="image-button paper-image"
+                type="button"
+                data-lightbox="assets/images/alpha-results.webp"
+                data-caption="闭眼状态下枕区 Alpha 活动增强"
+                aria-label="放大 Alpha 分析结果图"
+              >
+                <img
+                  src="assets/images/alpha-results.webp"
+                  alt="睁眼和闭眼状态的枕区功率谱、通道箱线图、配对变化与时间进程"
+                  width="2200"
+                  height="1656"
+                  loading="lazy"
+                />
+                <span class="zoom-hint">放大实验结果图 ↗</span>
+              </button>
+              <figcaption>
+                <b>核心结果</b>
+                <span>闭眼条件在约 10.5 Hz 出现清晰峰值，三个枕区通道的 Alpha 功率均高于睁眼条件。</span>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="support-gallery reveal">
+            <figure>
+              <button
+                class="image-button"
+                type="button"
+                data-lightbox="assets/images/alpha-montage.webp"
+                data-caption="Alpha 实验电极布置：Oz、O1、O2；Fp1 为 REF，Fp2 为 BIAS"
+                aria-label="放大 Alpha 电极布置图"
+              >
+                <img src="assets/images/alpha-montage.webp" alt="Alpha 实验电极放置图" loading="lazy" />
+              </button>
+              <figcaption><b>电极布置</b><span>Oz / O1 / O2 枕区采集</span></figcaption>
+            </figure>
+            <figure>
+              <button
+                class="image-button"
+                type="button"
+                data-lightbox="assets/images/alpha-protocol.webp"
+                data-caption="睁眼闭眼实验流程与三通道时域脑电"
+                aria-label="放大 Alpha 实验范式图"
+              >
+                <img src="assets/images/alpha-protocol.webp" alt="睁眼闭眼实验流程与三通道脑电" loading="lazy" />
+              </button>
+              <figcaption><b>范式与原始响应</b><span>状态切换由 Marker 定位</span></figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <article id="ssvep" class="case-study ssvep-case">
+          <div class="case-index reveal"><span>CASE 02</span><b>15-HZ SSVEP</b></div>
+          <div class="case-layout reverse">
+            <figure class="result-figure reveal">
+              <button
+                class="image-button paper-image"
+                type="button"
+                data-lightbox="assets/images/ssvep-results.webp"
+                data-caption="15 Hz SSVEP 的频谱、通道信噪比与事件相关时频结果"
+                aria-label="放大 SSVEP 分析结果图"
+              >
+                <img
+                  src="assets/images/ssvep-results.webp"
+                  alt="15 Hz SSVEP 频谱、各通道信噪比箱线图和时频响应"
+                  width="2200"
+                  height="1657"
+                  loading="lazy"
+                />
+                <span class="zoom-hint">放大实验结果图 ↗</span>
+              </button>
+              <figcaption>
+                <b>核心结果</b>
+                <span>刺激期在 15 Hz 出现持续增强，并观察到 30 Hz 二次谐波；10 个 Trial 均获得正 SNR。</span>
+              </figcaption>
+            </figure>
+
+            <div class="case-copy reveal" data-delay="100">
+              <p class="eyebrow">STEADY-STATE VISUAL EVOKED POTENTIAL</p>
+              <h3>15 Hz 稳态视觉诱发电位</h3>
+              <p>
+                被试注视 15 Hz 闪烁刺激，每个 Trial 包含注视、刺激和休息三个阶段。分析去除刺激开始后
+                0.5 秒的瞬态段，再比较刺激前后频谱与时频能量。
+              </p>
+              <div class="metric-stack">
+                <div><strong>10</strong><span>次重复 Trial</span></div>
+                <div><strong>15 <small>Hz</small></strong><span>基频稳定增强</span></div>
+                <div><strong>30 <small>Hz</small></strong><span>可见二次谐波</span></div>
+              </div>
+              <div class="method-note">
+                <b>分析路径</b>
+                <p>1–45 Hz 滤波 → Marker 分段 → 截去前 0.5 s → PSD / SNR → 事件相关时频分析</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="support-gallery single reveal">
+            <figure>
+              <button
+                class="image-button"
+                type="button"
+                data-lightbox="assets/images/ssvep-protocol.webp"
+                data-caption="15 Hz SSVEP 单 Trial 流程与 Oz、O1、O2 时域脑电"
+                aria-label="放大 SSVEP 实验范式图"
+              >
+                <img src="assets/images/ssvep-protocol.webp" alt="15 Hz SSVEP 实验流程和三通道脑电" loading="lazy" />
+              </button>
+              <figcaption><b>实验范式</b><span>2 s 注视 · 6 s 刺激 · 3 s 休息</span></figcaption>
+            </figure>
+            <div class="protocol-card">
+              <p>ONE TRIAL</p>
+              <ol>
+                <li><span>00–02 s</span><b>Fixation</b><small>建立视觉注视</small></li>
+                <li><span>02–08 s</span><b>15 Hz stimulation</b><small>诱发稳态响应</small></li>
+                <li><span>08–11 s</span><b>Rest</b><small>恢复与下一轮准备</small></li>
+              </ol>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section id="demo" class="demo-section section-space">
+        <div class="section-shell demo-grid">
+          <div class="demo-copy reveal">
+            <p class="eyebrow">01 / EEG · SYSTEM DEMO</p>
+            <h2>从佩戴，到看见实时脑电。</h2>
+            <p>
+              视频记录了脑电帽、电极连接、采集硬件和上位机界面的实际运行过程。点击播放，查看完整系统演示。
+            </p>
+            <dl>
+              <div><dt>输入</dt><dd>多通道头皮 EEG</dd></div>
+              <div><dt>同步</dt><dd>实验事件 Marker</dd></div>
+              <div><dt>输出</dt><dd>时域波形、频谱与 CSV</dd></div>
+            </dl>
+          </div>
+          <div class="video-shell reveal" data-delay="100">
+            <video controls playsinline preload="none" poster="assets/images/eeg-experiment.webp" aria-label="脑电采集系统实机演示">
+              <source src="assets/video/eeg-demo.mp4" type="video/mp4" />
+              你的浏览器不支持 HTML5 视频。<a href="assets/video/eeg-demo.mp4">下载脑电演示视频</a>
+            </video>
+            <div class="video-meta"><span>EEG SYSTEM DEMO</span><span>MP4 · 实机拍摄</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="stimulation" class="stimulation-section section-shell section-space">
+        <div class="section-heading reveal">
+          <p class="eyebrow">02 / TRANSCRANIAL ELECTRICAL STIMULATION · 2025.06—2025.11</p>
+          <h2>高电流高频<br />经颅电刺激仪</h2>
+          <p class="project-role">负责内容：嵌入式软硬件研发 · 整机设计 · 驱动、监测与交互</p>
+          <h3 class="background-label">项目背景</h3>
+          <p>现有经颅电刺激产品的刺激电流与频率范围受限。面向高频、高电流神经调控研究需求，开发多通道恒流刺激系统，支持参数配置、多模式波形输出，以及电流、阻抗监测和异常保护。</p>
+        </div>
+        <h3 class="outcome-label">研发成果 <span>原型机开发与整机联调</span></h3>
+        <div class="stat-grid reveal">
+          <article><strong>4</strong><span>通道波形控制</span></article>
+          <article><strong>0–100 <small>kHz</small></strong><span>输出频率范围</span></article>
+          <article><strong>0–15 <small>mA</small></strong><span>恒流输出范围</span></article>
+          <article><strong>&lt;1.5<small>%</small></strong><span>控制精度</span></article>
+        </div>
+        <div class="engineering-grid reveal">
+          <article><span>01 / 异常保护</span><h3>&lt;400 μs 急停响应</h3><p>ADC + DMA 实时采集电流与负载阻抗，检测过流、开路等异常并快速切断输出。</p></article>
+          <article><span>02 / 硬件落地</span><h3>约 1,200 元 / 套</h3><p>独立完成整机原理图、四层 PCB、PCBA 打样及联调，形成可运行原型机。</p></article>
+          <article><span>03 / 功耗管理</span><h3>9.8 W → 0.7 W</h3><p>非刺激状态关闭 DDS 与外围模拟电路电源，进入 Sleep；UART 中断唤醒延迟 79 μs。</p></article>
+        </div>
+        <p class="source-note">上述工程指标及“已投入临床实验使用”的项目进展来自个人履历；本页展示设备研发成果，未展示临床疗效结论。</p>
+      </section>
+
+      <section class="dark-section stimulation-detail section-space">
+        <div class="section-shell">
+          <div class="section-kicker reveal"><span>02</span><p>STIMULATION HARDWARE &amp; VALIDATION</p></div>
+          <div class="hardware-grid">
+            <figure class="hardware-photo reveal">
+              <button class="image-button" type="button" data-lightbox="assets/images/electrical-stimulation-hardware.webp" data-caption="经颅电刺激仪原型机：串口屏、主控及多通道输出电路" aria-label="放大经颅电刺激仪硬件图片">
+                <img src="assets/images/electrical-stimulation-hardware.webp" alt="经颅电刺激仪内部四层电路板与多模式选择串口屏" loading="lazy" />
+                <span class="zoom-hint">点击查看全图 ↗</span>
+              </button>
+              <figcaption><span>原型机实物</span><small>主控 / DDS / 恒流输出 / 串口屏</small></figcaption>
+            </figure>
+            <div class="hardware-copy reveal">
+              <p class="eyebrow">STM32F103 · FREERTOS · AD9959</p>
+              <h2>波形输出、实时监测，<br />在一台设备中协同。</h2>
+              <p class="lead">基于 STM32F103 与 FreeRTOS 完成设备控制，驱动 AD9959 产生多通道波形，通过迪文串口屏完成参数交互和状态显示。</p>
+              <dl class="feature-list">
+                <div><dt>多通道输出</dt><dd>开发 AD9959 驱动，将刺激参数换算为 DDS 控制字，实现四通道、多模式波形控制。</dd></div>
+                <div><dt>监测与保护</dt><dd>采集输出电流和负载阻抗，联动异常检测与快速输出切断。</dd></div>
+                <div><dt>人机交互</dt><dd>完成串口屏通信协议及界面控制，支持参数下发、电流与阻抗显示、异常告警。</dd></div>
+                <div><dt>样机应用</dt><dd>完成原型机研发与联调，并据项目履历投入临床实验使用。</dd></div>
+              </dl>
+            </div>
+          </div>
+          <div class="stimulation-evidence reveal">
+            <figure>
+              <button class="image-button" type="button" data-lightbox="assets/images/electrical-stimulation-experiment.webp" data-caption="经颅电刺激设备实验现场与电极连接布置" aria-label="放大电刺激实验现场图片">
+                <img src="assets/images/electrical-stimulation-experiment.webp" alt="实验参与者佩戴电极帽，经颅电刺激原型机置于旁侧并连接电极线" loading="lazy" />
+                <span class="zoom-hint">点击查看全图 ↗</span>
+              </button>
+              <figcaption>实验现场 / 电极连接与设备布置</figcaption>
+            </figure>
+            <div id="stimulation-demo" class="demo-copy">
+              <p class="eyebrow">02 / STIMULATION · SYSTEM DEMO</p>
+              <h2>查看原型机<br />实际运行。</h2>
+              <p>从硬件实物到设备操作，视频记录经颅电刺激系统的实机演示过程。</p>
+              <div class="video-shell">
+                <video controls playsinline preload="none" poster="assets/images/electrical-stimulation-hardware.webp" aria-label="经颅电刺激仪实机演示">
+                  <source src="assets/video/electrical-stimulation-demo.mp4" type="video/mp4" />
+                  你的浏览器不支持 HTML5 视频。<a href="assets/video/electrical-stimulation-demo.mp4">下载电刺激演示视频</a>
+                </video>
+                <div class="video-meta"><span>STIMULATION SYSTEM DEMO</span><span>MP4 · 实机拍摄</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="closing-section section-shell section-space reveal">
+        <p class="eyebrow">ABOUT / 陈庆标</p>
+        <h2>把电路、代码与实验，<br />连接成可运行的设备。</h2>
+        <div class="closing-grid">
+          <p>
+            中国科学技术大学电子信息硕士在读（2024—2027），本科毕业于安徽建筑大学电子信息工程专业。关注嵌入式软硬件研发，参与从电路设计、固件开发到整机验证的完整过程。
+          </p>
+          <ul>
+            <li><span>01</span>C / C++ · FreeRTOS · STM32</li>
+            <li><span>02</span>SPI / UART / CAN FD / USB · 驱动与通信</li>
+            <li><span>03</span>原理图与 PCB · 仪器调试 · 系统验证</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="section-shell">
+        <div><strong>陈庆标 · NEUROTECH PORTFOLIO</strong><p>多通道脑电采集 / 经颅电刺激</p></div>
+        <a href="https://github.com/c-q-b" target="_blank" rel="noreferrer">GitHub ↗</a>
+        <small>© <span data-year></span> CQB</small>
+      </div>
+    </footer>
+
+    <dialog class="lightbox" data-lightbox-dialog aria-label="图片预览">
+      <button class="lightbox-close" type="button" aria-label="关闭图片预览">×</button>
+      <div class="lightbox-body">
+        <img data-lightbox-image alt="" />
+        <p data-lightbox-caption></p>
+      </div>
+    </dialog>
+  </body>
+</html>
