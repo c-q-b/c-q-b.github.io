@@ -230,8 +230,8 @@ button {
 .hero {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 0.83fr) minmax(520px, 1.17fr);
-  gap: clamp(50px, 7vw, 110px);
+  grid-template-columns: minmax(440px, 0.94fr) minmax(440px, 1.06fr);
+  gap: clamp(40px, 5vw, 72px);
   align-items: center;
   width: 100%;
   max-width: none;
@@ -280,8 +280,13 @@ button {
 }
 
 .hero h1 {
-  max-width: 700px;
-  font-size: clamp(3rem, 5.1vw, 5.3rem);
+  font-size: clamp(3.2rem, 5vw, 4.9rem);
+}
+
+.hero h1 > span,
+.hero h1 em {
+  display: block;
+  white-space: nowrap;
 }
 
 .hero h1 em {
@@ -290,7 +295,7 @@ button {
 }
 
 .hero-intro {
-  max-width: 600px;
+  max-width: 540px;
   margin: 30px 0 0;
   color: rgba(255, 255, 255, 0.68);
   font-size: clamp(1rem, 1.4vw, 1.18rem);
@@ -369,7 +374,7 @@ button {
 .hero-visual {
   position: relative;
   z-index: 1;
-  padding: 18px 0 60px;
+  padding: 18px 0 52px;
 }
 
 .hero-frame {
@@ -460,10 +465,10 @@ button {
 
 .signal-card {
   position: absolute;
-  right: -28px;
+  right: 0;
   bottom: 0;
   z-index: 3;
-  width: min(72%, 450px);
+  width: min(68%, 420px);
   padding: 15px 17px 10px;
   background: rgba(13, 29, 25, 0.94);
   border: 1px solid rgba(116, 226, 205, 0.25);
@@ -1501,12 +1506,23 @@ body:has(.lightbox[open]) { overflow: hidden; }
 
 @media (max-width: 1040px) {
   .hero {
-    grid-template-columns: 1fr 1fr;
-    gap: 42px;
+    grid-template-columns: 1fr;
+    gap: 56px;
+    min-height: auto;
+    padding-top: 138px;
   }
 
   .hero h1 {
-    font-size: clamp(3rem, 6vw, 4.6rem);
+    font-size: clamp(3.4rem, 7.5vw, 4.8rem);
+  }
+
+  .hero-copy {
+    max-width: 760px;
+  }
+
+  .hero-visual {
+    width: min(100%, 820px);
+    justify-self: end;
   }
 
   .stat-grid {
@@ -1609,7 +1625,7 @@ body:has(.lightbox[open]) { overflow: hidden; }
   }
 
   .hero h1 {
-    font-size: clamp(2.75rem, 12vw, 4.1rem);
+    font-size: clamp(2.15rem, 10.5vw, 3.7rem);
   }
 
   .hero-visual {
